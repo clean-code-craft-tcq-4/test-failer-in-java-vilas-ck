@@ -17,7 +17,7 @@ public class Tshirts {
             assert (size(43) == "L");
             System.out.println("All is well (maybe!)");
         }catch(AssertionError e){
-            System.out.println("All is not well" + e);
+            throw new AssertionError("All is not well");
         }
     }
 }
