@@ -9,11 +9,15 @@ public class Tshirts {
         }
     }
 
-    public static void main(String[] args) { 
-        assert(size(37) == "S");
-        assert(size(38) == "L");
-        assert(size(40) == "M");
-        assert(size(43) == "L");
-        System.out.println("All is well (maybe!)");
+    public static void main(String[] args) {
+        try {
+            assert (size(37) == "S");
+            assert (size(38) == "M");
+            assert (size(40) == "M");
+            assert (size(43) == "L");
+            System.out.println("All is well (maybe!)");
+        }catch(AssertionError e){
+            System.out.println("All is not well" + e);
+        }
     }
 }
