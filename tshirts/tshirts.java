@@ -12,15 +12,12 @@ public class Tshirts {
     public static void main(String[] args) {
         try {
             assert (size(37) == "S");
-            String size = size(38);
-            System.out.println("size for 38)" + size);
-            assert(size.equals("M"));
-            //assert (size(38) == "M");
+            assert (size(38) == "M");
             assert (size(40) == "M");
             assert (size(43) == "L");
             System.out.println("All is well (maybe!)");
         }catch(AssertionError e){
-            throw new AssertionError("All is not well");
+            throw new AssertionError("All is not well" + e);
         }
     }
 }
